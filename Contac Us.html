@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    
+  <!--NAVIGASI-->
+  <nav class="border-white bg-white dark:border-white-700 fixed top-0 w-full z-50 shadow-md">
+    <div class="max-w-screen-xl flex items-center justify-between mx-auto p-0">
+      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="img/bimoli-logo.png" class="h-8" alt="" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
+      </a>
+      <!-- Kolom Pencarian -->
+      <div class="relative flex items-center space-x-3 flex-grow">
+        <input type="text" placeholder="Temukan resep dan artikel kamu disini" class="border rounded-l-lg rounded-r-none px-2 py-1 focus:outline-none focus:border-blue-500 text-stone-950 opacity-50 w-full" />
+        <img src="img/search.png" alt="Search" class="h-5 absolute right-3 top-2" />
+      </div>
+      
+      <!-- Tombol Hamburger untuk Menu Tersembunyi -->
+      <button data-collapse-toggle="navbar-hamburger" type="button" class="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-hamburger" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+      </button>
+      
+      <!-- Daftar navigasi yang tersembunyi -->
+      <ul id="navbar-hamburger" class="hidden absolute z-10 top-14 left-0 mt-1 bg-white border rounded shadow-md">
+        <li><a href="index.html" class="block px-4 py-2 hover:bg-gray-100">Home</a></li>
+        <li><a href="Biodata.html" class="block px-4 py-2 hover:bg-gray-100">Biodata</a></li>
+        <li><a href="Contac Us.html" class="block px-4 py-2 hover:bg-gray-100">Contact Us</a></li>
+        <li><a href="Free Content.html" class="block px-4 py-2 hover:bg-gray-100">Free Content Page</a></li>
+      </ul>
+      <!-- Script untuk Menu Tersembunyi -->
+      <script>
+        const menuToggle = document.querySelector('[data-collapse-toggle="navbar-hamburger"]');
+        const menu = document.getElementById('navbar-hamburger');
+      
+        menuToggle.addEventListener('click', () => {
+          const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+          menuToggle.setAttribute('aria-expanded', !isExpanded);
+          menu.classList.toggle('hidden', isExpanded);
+        });
+      </script>
+      
+      <!-- Div untuk Tampilkan Navigasi -->
+      <div class="hidden w-full" id="navbar-hamburger">
+        <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+          <!-- Menu items go here -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+    <div class="container mx-auto py-8">
+        <div class="bg-white shadow-md rounded-lg overflow-hidden">
+            <div class="p-4">
+                <h2 class="text-2xl font-semibold mb-4">Contact Us</h2>
+
+                <form class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500" placeholder="Your Name">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500" placeholder="Your Email">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                        <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-blue-500" placeholder="Your Message"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-yellow-400 py-10 flex items-center">
+      <img src="img/footer-logo.png" alt="" class="h-16 mr-4">
+      <div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4">
+        <div class="w-full md:col-span-1">
+          <h4 class="text-xs font-semibold">Tentang Kami</h4>
+          <h5 class="text-xs">Hubungi Kami</h5>
+          <h5 class="text-xs">Produk</h5>
+          <h5 class="text-xs">Cerita Indofood</h5>
+        </div>
+        <div class="w-full md:col-span-1 flex flex-col">
+          <h3 class="text-xs font-semibold mb-2">Dapur Ibu</h3>
+          <h5 class="text-xs">Favorit Keluarga</h5>
+          <h5 class="text-xs">Favorit si Kecil</h5>
+        </div>
+        <div class="w-full md:col-span-1 -ml-2 flex flex-col">
+          <h3 class="text-xs font-semibold mb-2">Siasat Ibu</h3>
+          <h5 class="text-xs">Tips Dapur</h5>
+          <h5 class="text-xs">Tips Masak</h5>
+        </div>
+        <div class="w-full md:col-span-1 flex flex-col">
+          <h5 class="text-xs font-semibold mb-2">Aktivitas</h5>
+          <h5 class="mt-2 text-xs">Galeri</h5>
+        </div>
+        <div class="w-full md:col-span-1 flex flex-col">
+          <h5 class="text-xs font-semibold mb-2">Promosi</h5>
+          <h5 class="mt-1 text-xs">Promo Lainnya</h5>
+        </div>
+      </div>
+    </footer>
+    
+    <div class="relative">
+      <img src="img/copyright-background.png" alt="" class="w-full">
+      <div class="absolute bottom-0 w-full text-center text-xs text-black py-2">
+        ©2021 Bimoli Indonesia. All rights reserved.
+      </div>
+    </div>
+
+</body>
+</html>

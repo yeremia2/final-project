@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BIMOLI - Biodata</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  
+  <!--NAVIGASI-->
+  <nav class="border-white bg-white dark:border-white-700 fixed top-0 w-full z-50 shadow-md">
+    <div class="max-w-screen-xl flex items-center justify-between mx-auto p-0">
+      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="img/bimoli-logo.png" class="h-8" alt="" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"></span>
+      </a>
+      <!-- Kolom Pencarian -->
+      <div class="relative flex items-center space-x-3 flex-grow">
+        <input type="text" placeholder="Temukan resep dan artikel kamu disini" class="border rounded-l-lg rounded-r-none px-2 py-1 focus:outline-none focus:border-blue-500 text-stone-950 opacity-50 w-full" />
+        <img src="img/search.png" alt="Search" class="h-5 absolute right-3 top-2" />
+      </div>
+      
+      <!-- Tombol Hamburger untuk Menu Tersembunyi -->
+      <button data-collapse-toggle="navbar-hamburger" type="button" class="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-hamburger" aria-expanded="false">
+        <span class="sr-only">Open main menu</span>
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+        </svg>
+      </button>
+      
+      <!-- Daftar navigasi yang tersembunyi -->
+      <ul id="navbar-hamburger" class="hidden absolute z-10 top-14 left-0 mt-1 bg-white border rounded shadow-md">
+        <li><a href="index.html" class="block px-4 py-2 hover:bg-gray-100">Home</a></li>
+        <li><a href="Biodata.html" class="block px-4 py-2 hover:bg-gray-100">Biodata</a></li>
+        <li><a href="Contac Us.html" class="block px-4 py-2 hover:bg-gray-100">Contact Us</a></li>
+        <li><a href="Free Content.html" class="block px-4 py-2 hover:bg-gray-100">Free Content Page</a></li>
+      </ul>
+      <!-- Script untuk Menu Tersembunyi -->
+      <script>
+        const menuToggle = document.querySelector('[data-collapse-toggle="navbar-hamburger"]');
+        const menu = document.getElementById('navbar-hamburger');
+      
+        menuToggle.addEventListener('click', () => {
+          const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+          menuToggle.setAttribute('aria-expanded', !isExpanded);
+          menu.classList.toggle('hidden', isExpanded);
+        });
+      </script>
+      
+      <!-- Div untuk Tampilkan Navigasi -->
+      <div class="hidden w-full" id="navbar-hamburger">
+        <ul class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+          <!-- Menu items go here -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="bg-gray-100 py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-800 mb-4">BIODATA</h2>
+      <div class="flex flex-col md:flex-row">
+        <div class="w-full md:w-1/2 p-4">
+          <img src="img/WhatsApp Image 2023-12-05 at 22.54.58_22ac2b3d.jpg" alt="Biodata image" class="max-w-full h-auto rounded-lg">
+        </div>
+        <div class="w-full md:w-1/2 p-4">
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Nama Lengkap</h3>
+          <p class="text-lg text-gray-600 mb-4">Jeremia Sibarani</p>
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Tempat Lahir</h3>
+          <p class="text-lg text-gray-600 mb-4">Riau (simpang SKPD)</p>
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Tanggal Lahir</h3>
+          <p class="text-lg text-gray-600 mb-4">21 JUNI 2003</p>
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Alamat</h3>
+          <p class="text-lg text-gray-600 mb-4">Jl. Gereja HKBP Simpang SKPD</p>
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Pendidikan</h3>
+          <p class="text-lg text-gray-600 mb-4">SDN 026 Rambah Hilir, Riau</p>
+          <p class="text-lg text-gray-600 mb-4">SMP Binaguna Tanah Jawa P. Sinatar</p>
+          <p class="text-lg text-gray-600 mb-4">SMK Advent Air Bersih Medan</p>
+          <p class="text-lg text-gray-600 mb-4">Universitas ADVENT Indonesia</p>
+          <h3 class="text-xl font-bold text-gray-800 mb-4">Pekerjaan</h3>
+          <p class="text-lg text-gray-600 mb-4">Web Developer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-yellow-400 py-10 flex items-center">
+    <img src="img/footer-logo.png" alt="" class="h-16 mr-4">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-5 gap-4">
+      <div class="w-full md:col-span-1">
+        <h4 class="text-xs font-semibold">Tentang Kami</h4>
+        <h5 class="text-xs">Hubungi Kami</h5>
+        <h5 class="text-xs">Produk</h5>
+        <h5 class="text-xs">Cerita Indofood</h5>
+      </div>
+      <div class="w-full md:col-span-1 flex flex-col">
+        <h3 class="text-xs font-semibold mb-2">Dapur Ibu</h3>
+        <h5 class="text-xs">Favorit Keluarga</h5>
+        <h5 class="text-xs">Favorit si Kecil</h5>
+      </div>
+      <div class="w-full md:col-span-1 -ml-2 flex flex-col">
+        <h3 class="text-xs font-semibold mb-2">Siasat Ibu</h3>
+        <h5 class="text-xs">Tips Dapur</h5>
+        <h5 class="text-xs">Tips Masak</h5>
+      </div>
+      <div class="w-full md:col-span-1 flex flex-col">
+        <h5 class="text-xs font-semibold mb-2">Aktivitas</h5>
+        <h5 class="mt-2 text-xs">Galeri</h5>
+      </div>
+      <div class="w-full md:col-span-1 flex flex-col">
+        <h5 class="text-xs font-semibold mb-2">Promosi</h5>
+        <h5 class="mt-1 text-xs">Promo Lainnya</h5>
+      </div>
+    </div>
+  </footer>
+  
+  <div class="relative">
+    <img src="img/copyright-background.png" alt="" class="w-full">
+    <div class="absolute bottom-0 w-full text-center text-xs text-black py-2">
+      ©2021 Bimoli Indonesia. All rights reserved.
+    </div>
+  </div>
+
+</body>
+</html>
